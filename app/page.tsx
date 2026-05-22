@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import Hero from "@/components/home/Hero";
 import Approach from "@/components/home/Approach";
 import Conditions from "@/components/home/Conditions";
@@ -81,10 +80,8 @@ const pageSchema = {
 export default function HomePage() {
   return (
     <>
-      <Script
-        id="ldjson-home"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
 

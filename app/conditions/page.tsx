@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/home/Reveal";
 import { GridPattern } from "@/components/home/decor";
@@ -91,16 +90,12 @@ const approachSteps = [
 export default function ConditionsPage() {
   return (
     <>
-      <Script
-        id="ldjson-conditions"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
-      <Script
-        id="ldjson-localbusiness"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 

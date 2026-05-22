@@ -28,6 +28,7 @@ const QUICK_LINKS = [
   { label: "About Us", href: "/about/" },
   { label: "New Patients", href: "/new-patients/" },
   { label: "Appointments", href: "/appointments/" },
+  { label: "Areas We Serve", href: "/areas/" },
   { label: "Contact", href: "/contact/" },
   { label: "Sitemap", href: "/sitemap/" },
   { label: "Accessibility", href: "/accessibility/" },

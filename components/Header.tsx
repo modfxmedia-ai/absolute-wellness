@@ -98,6 +98,12 @@ export default function Header() {
   useEffect(() => {
     setMobileOpen(false);
     setOpenSub(null);
+    // Drop focus from a just-clicked nav link so the desktop dropdown
+    // (driven by group-focus-within) doesn't stay open after navigation.
+    if (typeof document !== "undefined") {
+      const el = document.activeElement as HTMLElement | null;
+      if (el && typeof el.blur === "function") el.blur();
+    }
   }, [pathname]);
 
   useEffect(() => {
@@ -204,6 +210,7 @@ export default function Header() {
                                 key={c.href}
                                 href={c.href}
                                 aria-current={a ? "page" : undefined}
+                                onClick={(e) => e.currentTarget.blur()}
                                 className={`block rounded-lg px-4 py-2.5 text-sm transition-colors ${
                                   a
                                     ? "bg-[#f0f4e8] text-[#7E9146] font-semibold"

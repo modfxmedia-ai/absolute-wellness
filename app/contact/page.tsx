@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/home/Reveal";
 import { Icons, SectionPill } from "@/components/home/ui";
@@ -75,16 +74,12 @@ function FacebookIcon({ cls }: { cls?: string }) {
 export default function ContactPage() {
   return (
     <>
-      <Script
-        id="ldjson-contact"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
-      <Script
-        id="ldjson-localbusiness"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 

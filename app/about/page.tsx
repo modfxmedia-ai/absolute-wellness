@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/home/Reveal";
 import { GridPattern } from "@/components/home/decor";
@@ -78,16 +77,12 @@ const reasons = [
 export default function AboutPage() {
   return (
     <>
-      <Script
-        id="ldjson-about"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
-      <Script
-        id="ldjson-localbusiness"
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 

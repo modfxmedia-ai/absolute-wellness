@@ -1,0 +1,192 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import PageHero from "@/components/PageHero";
+import Reveal from "@/components/home/Reveal";
+import { Icons, SectionPill } from "@/components/home/ui";
+import {
+  ConditionProse,
+  RelatedConditions,
+  ConditionCTABand,
+  SignsGrid,
+  TreatmentApproach,
+  WhyAWC,
+} from "@/components/ConditionSections";
+import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+
+const TITLE = "Hormonal Imbalance in Eugene, OR | Absolute Wellness Center";
+const DESCRIPTION =
+  "Hormonal imbalance care in Eugene, OR. Restore healthy hormone levels for metabolism, sleep, mood, and more at Absolute Wellness Center. Call (541) 484-5777.";
+const URL = "https://awceugene.com/hormonal-imbalance/";
+
+export const metadata: Metadata = {
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: { canonical: URL },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: URL,
+    siteName: "Absolute Wellness Center",
+    locale: "en_US",
+    type: "article",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+};
+
+const pageSchema = buildPageGraph({
+  url: URL,
+  name: TITLE,
+  description: DESCRIPTION,
+  breadcrumb: [
+    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Conditions", item: "https://awceugene.com/conditions/" },
+    { name: "Hormonal Imbalance" },
+  ],
+});
+
+export default function HormonalImbalancePage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+
+      <PageHero
+        title="Hormonal Imbalance"
+        subtitle="Hormones regulate nearly every major body function — when they're off, you feel it everywhere."
+        badge="Conditions"
+        image="/images/hormonal-couple.jpg"
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: "Conditions", href: "/conditions/" },
+          { label: "Hormonal Imbalance" },
+        ]}
+      />
+
+      {/* [B] LIVE CONTENT — verbatim from awceugene.com/hormonal-imbalance/ */}
+      <section className="relative overflow-hidden bg-white py-20">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-32 top-20 h-[420px] w-[420px] rounded-full opacity-[0.07] blur-3xl"
+          style={{ background: "radial-gradient(circle, #7E9146 0%, transparent 70%)" }}
+        />
+        <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-[3fr_2fr] lg:items-start">
+          <div>
+            <Reveal>
+              <SectionPill icon={Icons.leaf("h-3.5 w-3.5")}>Hormonal Imbalance</SectionPill>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <h2 className="mt-5 font-[family-name:var(--font-raleway)] text-4xl font-black tracking-tight text-gray-900 sm:text-5xl">
+                Hormonal <span style={{ color: "#7E9146" }}>Imbalance</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={0.14}>
+              <ConditionProse>
+                <h3>What Causes Hormonal Imbalance?</h3>
+                <p>
+                  When there is too much or too little of a particular hormone
+                  in our bloodstream, we can suffer from a hormone imbalance.
+                  For women hormonal imbalances are more common during puberty,
+                  pregnancy, and menstruation. Even if the imbalances are small,
+                  they can cause side effects in your body.
+                </p>
+                <p>
+                  Hormones regulate most major body functions and processes.
+                  They regulate our metabolism and appetite, our heart rate,
+                  sleep cycle, growth and development, mood and stress level,
+                  body temperature, plus reproductive cycles and sexual
+                  functions.
+                </p>
+                <p>
+                  While some hormones fluctuate throughout your lifetime and may
+                  just be due to aging, your signs of hormonal imbalance will
+                  depend on what hormones or glands aren&rsquo;t working
+                  properly.
+                </p>
+              </ConditionProse>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.2} className="relative">
+            <div className="group relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
+              <Image
+                src="/images/hormonal-couple.jpg"
+                alt="Hormonal imbalance care"
+                width={800}
+                height={600}
+                className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#7E9146]/20 via-transparent to-transparent"
+              />
+            </div>
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -bottom-6 -right-6 -z-10 h-32 w-32 rounded-3xl"
+              style={{ backgroundColor: "rgba(126,145,70,0.15)" }}
+            />
+          </Reveal>
+        </div>
+      </section>
+
+      {/* [E] ENHANCEMENT — not on live site */}
+      <SignsGrid
+        pill="Common Signs"
+        heading="Symptoms of"
+        accent="hormone imbalance"
+        intro="These symptoms often get blamed on 'getting older.' They're usually a signal that something measurable can be addressed."
+        items={[
+          "Persistent fatigue and low energy",
+          "Brain fog and trouble concentrating",
+          "Weight changes without lifestyle changes",
+          "Mood swings or low libido",
+          "Hot flashes or night sweats",
+          "Sleep that doesn't refresh",
+        ]}
+      />
+
+      {/* [F] ENHANCEMENT — not on live site */}
+      <TreatmentApproach
+        pill="Our Approach"
+        heading="From tired and foggy"
+        accent="to balanced and clear"
+        intro="Lab-guided, individualized hormone care — never one-size-fits-all."
+        steps={[
+          { title: "Test", body: "Comprehensive lab work measures your hormones precisely instead of guessing from symptoms alone.", icon: Icons.stetho("h-6 w-6") },
+          { title: "Balance", body: "Bioidentical hormone therapy and nutritional support are tailored to your levels and goals.", icon: Icons.drip("h-6 w-6") },
+          { title: "Thrive", body: "Regular follow-ups, lifestyle coaching, and lab rechecks keep you feeling your best long-term.", icon: Icons.leaf("h-6 w-6") },
+        ]}
+      />
+
+      {/* [G] ENHANCEMENT — not on live site */}
+      <WhyAWC condition="Hormonal Imbalance" />
+
+      {/* [C] ENHANCEMENT — not on live site */}
+      <RelatedConditions
+        hrefs={["/pain-relief/", "/neuropathy/", "/joint-pain/"]}
+      />
+
+      {/* [D] ENHANCEMENT — not on live site */}
+      <ConditionCTABand
+        heading="Ready to Feel Balanced Again?"
+        body="Call (541) 484-5777 or request an appointment online."
+      />
+    </>
+  );
+}
