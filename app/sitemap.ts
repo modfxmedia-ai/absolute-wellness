@@ -29,7 +29,6 @@ const ROUTES = [
   "/shoulder-pain/",
   "/sitemap/",
   "/spinal-decompression/",
-  "/thank-you/",
   "/trigger-point-injections/",
   "/whiplash/",
 ];

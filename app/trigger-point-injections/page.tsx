@@ -9,7 +9,7 @@ import {
   ProcessTimeline,
 } from "@/components/ServiceSections";
 import ServiceFAQ from "@/components/ServiceFAQ";
-import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph } from "@/lib/site-schema";
 
 const TITLE =
   "Trigger Point Injections in Eugene, OR | Absolute Wellness Center";
@@ -59,10 +59,6 @@ export default function TriggerPointInjectionsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <PageHero

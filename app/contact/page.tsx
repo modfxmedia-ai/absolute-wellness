@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import Reveal from "@/components/home/Reveal";
 import { Icons, SectionPill } from "@/components/home/ui";
 import { MapPinPulse } from "@/components/MotionAccents";
-import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph } from "@/lib/site-schema";
 import ContactForm from "@/components/ContactForm";
 
 const BRAND = "#7E9146";
@@ -77,10 +77,6 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <PageHero

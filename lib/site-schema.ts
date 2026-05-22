@@ -26,25 +26,6 @@ export const websiteSchema = {
   inLanguage: "en-US",
 };
 
-export const localBusinessSchema = {
-  "@context": "http://schema.org",
-  "@type": "LocalBusiness",
-  name: "Absolute Wellness Center",
-  url: SITE_URL,
-  image: "/wp-content/uploads/2023/08/Absolute-Wellness-Center-Logo.jpg",
-  address: {
-    addressLocality: "Eugene",
-    addressRegion: "OR",
-    postalCode: "97401",
-    streetAddress: "2286 Oakmont Way ",
-  },
-  openingHours:
-    "Monday: 9:00 am - 6:00 pm,Tuesday: 9:00 am - 6:00 pm,Wednesday: 9:00 am - 6:00 pm,Thrusday: 9:00 am - 6:00 pm,Friday: Closed,Saturday: Closed,Sunday: Closed",
-  priceRange: "$$",
-  telephone: "+1-(541) 484-5777",
-  description: "Convenient and affordable Regenerative Medicine in Eugene, OR.",
-};
-
 // Richer MedicalBusiness representation for the clinic — used at the site
 // root and on every page graph so Google has a consistent practice entity.
 export const medicalBusinessSchema = {

@@ -7,7 +7,7 @@ import { GridPattern } from "@/components/home/decor";
 import { Icons, SectionPill } from "@/components/home/ui";
 import { BreathPulse, DriftingOrbs } from "@/components/MotionAccents";
 import AboutMotionGraphs from "@/components/AboutMotionGraphs";
-import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
 
@@ -81,10 +81,6 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <PageHero

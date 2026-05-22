@@ -10,7 +10,7 @@ import {
   ProcessTimeline,
 } from "@/components/ServiceSections";
 import ServiceFAQ from "@/components/ServiceFAQ";
-import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
 
@@ -78,10 +78,6 @@ export default function BioidenticalHormonesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <PageHero

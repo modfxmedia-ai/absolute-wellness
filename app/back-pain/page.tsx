@@ -12,7 +12,7 @@ import {
   TreatmentApproach,
   WhyAWC,
 } from "@/components/ConditionSections";
-import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph } from "@/lib/site-schema";
 
 const TITLE = "Back Pain in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
@@ -61,10 +61,6 @@ export default function BackPainPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <PageHero

@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/home/Reveal";
 import { Icons, SectionPill } from "@/components/home/ui";
-import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph } from "@/lib/site-schema";
 
 const TITLE = "Sitemap  in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION = "Sitemap -";
@@ -84,10 +84,6 @@ export default function SitemapPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <PageHero

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 
 const BRAND = "#7E9146";
 
@@ -34,33 +33,6 @@ const QUICK_LINKS = [
   { label: "Accessibility", href: "/accessibility/" },
   { label: "Privacy Policy", href: "/privacy-policy/" },
 ];
-
-const localBusinessSchema = {
-  "@context": "http://schema.org",
-  "@type": "LocalBusiness",
-  name: "Absolute Wellness Center",
-  url: "https://awceugene.com",
-  image: "/images/Absolute-Wellness-Center-Logo.jpg",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "2286 Oakmont Way",
-    addressLocality: "Eugene",
-    addressRegion: "OR",
-    postalCode: "97401",
-    addressCountry: "US",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
-  ],
-  priceRange: "$$",
-  telephone: "+1-541-484-5777",
-  description: "Convenient and affordable Regenerative Medicine in Eugene, OR.",
-};
 
 function ColumnHeading({ children }: { children: React.ReactNode }) {
   return (
@@ -284,13 +256,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      <Script
-        id="ldjson-localbusiness"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
     </footer>
   );
 }
