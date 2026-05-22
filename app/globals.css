@@ -40,3 +40,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 .awc-arrow-bounce { animation: awc-arrow 1.8s ease-in-out infinite; }
 
+/* SSR-safe reveal animation. Content is always visible — animation only
+   enhances first paint and is disabled under prefers-reduced-motion. */
+@keyframes awc-reveal {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.awc-reveal {
+  animation: awc-reveal 0.7s ease-out both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .awc-reveal { animation: none; }
+}
+

@@ -13,7 +13,7 @@ import {
   getRelatedServices,
   nearbyCities,
 } from "@/lib/areas";
-import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph, buildServiceSchema, medicalBusinessSchema } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
 const SITE = "https://awceugene.com";
@@ -53,7 +53,6 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       siteName: "Absolute Wellness Center",
       locale: "en_US",
       type: "article",
-      images: [{ url: service.image }],
     },
     robots: {
       index: true,
@@ -95,13 +94,23 @@ export default async function CityServicePage({ params }: { params: Params }) {
     })),
   };
 
+  const serviceSchema = buildServiceSchema({
+    url,
+    name: `${service.name} in ${city.name}, OR`,
+    description,
+    serviceType: service.name,
+    areaServed: [city.name, city.county, `${city.region}`],
+    image: `${SITE}${service.image}`,
+  });
+
   const related = getRelatedServices(service);
   const near = nearbyCities(city, 6);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <PageHero

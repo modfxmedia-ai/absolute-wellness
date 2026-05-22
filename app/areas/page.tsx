@@ -3,7 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/home/Reveal";
 import { CITIES, SERVICES, REGIONS, ORIGIN } from "@/lib/areas";
-import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph, medicalBusinessSchema } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
 const SITE = "https://awceugene.com";
@@ -41,7 +41,7 @@ export default function AreasIndexPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusinessSchema) }} />
 
       <PageHero
         title="Areas We Serve"

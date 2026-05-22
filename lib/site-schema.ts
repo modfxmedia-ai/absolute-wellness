@@ -45,6 +45,84 @@ export const localBusinessSchema = {
   description: "Convenient and affordable Regenerative Medicine in Eugene, OR.",
 };
 
+// Richer MedicalBusiness representation for the clinic — used at the site
+// root and on every page graph so Google has a consistent practice entity.
+export const medicalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalBusiness", "MedicalClinic", "LocalBusiness"],
+  "@id": `${SITE_URL}/#medicalbusiness`,
+  name: "Absolute Wellness Center",
+  url: SITE_URL,
+  logo: `${SITE_URL}/images/logo.png`,
+  image: `${SITE_URL}/images/Absolute-Wellness-Center-Logo.jpg`,
+  telephone: "+1-541-484-5777",
+  priceRange: "$$",
+  description:
+    "Regenerative medicine clinic in Eugene, OR offering bioidentical hormone therapy, medical weight loss with semaglutide, peripheral neuropathy treatment, chiropractic care, spinal decompression, joint injections, and physical therapy.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "2286 Oakmont Way",
+    addressLocality: "Eugene",
+    addressRegion: "OR",
+    postalCode: "97401",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 44.0721,
+    longitude: -123.0867,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+  sameAs: ["https://www.facebook.com/AbsoluteWellnessCenter"],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.3",
+    reviewCount: "98",
+  },
+  medicalSpecialty: [
+    "Chiropractic",
+    "PhysicalTherapy",
+    "Endocrine",
+    "Nutrition",
+    "PainMedicine",
+  ],
+};
+
+export function buildServiceSchema(opts: {
+  url: string;
+  name: string;
+  description: string;
+  serviceType: string;
+  areaServed?: string[];
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    name: opts.name,
+    url: opts.url,
+    description: opts.description,
+    procedureType: opts.serviceType,
+    ...(opts.image ? { image: opts.image } : {}),
+    provider: { "@id": `${SITE_URL}/#medicalbusiness` },
+    ...(opts.areaServed && opts.areaServed.length
+      ? {
+          areaServed: opts.areaServed.map((a) => ({
+            "@type": "City",
+            name: a,
+          })),
+        }
+      : {}),
+  };
+}
+
 export function buildPageGraph(opts: {
   url: string;
   name: string;
@@ -63,6 +141,7 @@ export function buildPageGraph(opts: {
         url: opts.url,
         name: opts.name,
         isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${SITE_URL}/#medicalbusiness` },
         ...(opts.datePublished ? { datePublished: opts.datePublished } : {}),
         ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
         description: opts.description,
@@ -81,6 +160,7 @@ export function buildPageGraph(opts: {
         })),
       },
       websiteSchema,
+      medicalBusinessSchema,
     ],
   };
 }
