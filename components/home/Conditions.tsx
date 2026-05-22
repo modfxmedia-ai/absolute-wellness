@@ -8,29 +8,32 @@ const BRAND = "#7E9146";
 
 type Condition = {
   name: string;
+  href: string;
   icon: (cls?: string) => React.ReactNode;
 };
 
 const ROW_ONE: Condition[] = [
-  { name: "Back Pain", icon: Icons.spine },
-  { name: "Neck Pain", icon: Icons.spine },
-  { name: "Shoulder Pain", icon: Icons.hands },
-  { name: "Knee Pain", icon: Icons.figure },
-  { name: "Whiplash", icon: Icons.spine },
+  { name: "Back Pain", href: "/back-pain/", icon: Icons.spine },
+  { name: "Neck Pain", href: "/neck-pain/", icon: Icons.spine },
+  { name: "Shoulder Pain", href: "/shoulder-pain/", icon: Icons.hands },
+  { name: "Knee Pain", href: "/knee-pain/", icon: Icons.figure },
+  { name: "Whiplash", href: "/whiplash/", icon: Icons.spine },
 ];
 
 const ROW_TWO: Condition[] = [
-  { name: "Joint Pain", icon: Icons.scale },
-  { name: "Pain Relief", icon: Icons.shield },
-  { name: "Neuropathy", icon: Icons.drip },
-  { name: "Functional Weakness", icon: Icons.figure },
-  { name: "Hormonal Imbalance", icon: Icons.leaf },
+  { name: "Joint Pain", href: "/joint-pain/", icon: Icons.scale },
+  { name: "Pain Relief", href: "/pain-relief/", icon: Icons.shield },
+  { name: "Neuropathy", href: "/neuropathy/", icon: Icons.drip },
+  { name: "Auto Injury", href: "/auto-injury/", icon: Icons.figure },
+  { name: "Hormonal Imbalance", href: "/hormonal-imbalance/", icon: Icons.leaf },
 ];
 
 function ConditionCard({ c }: { c: Condition }) {
   return (
-    <div
-      className="group/card flex w-[320px] flex-shrink-0 cursor-default items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] px-7 py-6 backdrop-blur transition-all hover:-translate-y-1 hover:border-[#7E9146]/40 hover:bg-white/[0.08] sm:w-[340px]"
+    <Link
+      href={c.href}
+      aria-label={`Learn more about ${c.name}`}
+      className="group/card flex w-[320px] flex-shrink-0 items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] px-7 py-6 backdrop-blur transition-all hover:-translate-y-1 hover:border-[#7E9146]/40 hover:bg-white/[0.08] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#b8cd7a] sm:w-[340px]"
     >
       <span
         className="inline-flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl text-white shadow-lg transition-transform group-hover/card:scale-110 group-hover/card:rotate-3"
@@ -38,13 +41,18 @@ function ConditionCard({ c }: { c: Condition }) {
       >
         {c.icon("h-6 w-6")}
       </span>
-      <div className="min-w-0">
+      <div className="min-w-0 flex-1">
         <p className="font-[family-name:var(--font-raleway)] text-lg font-bold text-white">
           {c.name}
         </p>
-        <p className="mt-1 text-sm text-gray-400">We can help</p>
+        <p className="mt-1 inline-flex items-center gap-1 text-sm text-gray-400 transition-colors group-hover/card:text-[#b8cd7a]">
+          Learn more
+          <svg className="h-3.5 w-3.5 transition-transform group-hover/card:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </p>
       </div>
-    </div>
+    </Link>
   );
 }
 

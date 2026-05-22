@@ -338,7 +338,6 @@ export default function LocationContact() {
             <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-black/5 bg-white px-4 py-3 shadow-sm">
               {[
                 { icon: Icons.pin("h-4 w-4"), label: "Free parking" },
-                { icon: Icons.clock("h-4 w-4"), label: "30–60 min visits" },
                 { icon: Icons.shield("h-4 w-4"), label: "Wheelchair access" },
                 { icon: Icons.calendar("h-4 w-4"), label: "Same-week appts" },
               ].map((c, i) => (
