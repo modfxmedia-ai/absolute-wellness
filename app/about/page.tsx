@@ -6,6 +6,7 @@ import Reveal from "@/components/home/Reveal";
 import { GridPattern } from "@/components/home/decor";
 import { Icons, SectionPill } from "@/components/home/ui";
 import { BreathPulse, DriftingOrbs } from "@/components/MotionAccents";
+import AboutMotionGraphs from "@/components/AboutMotionGraphs";
 import { buildPageGraph, localBusinessSchema } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
@@ -194,6 +195,7 @@ export default function AboutPage() {
                     <BreathPulse size={240} />
                   </div>
                 </div>
+                <AboutMotionGraphs />
               </div>
             </Reveal>
           </div>
