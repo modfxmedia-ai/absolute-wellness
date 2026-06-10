@@ -14,7 +14,7 @@ import { buildPageGraph } from "@/lib/site-schema";
 const TITLE = "Spinal Decompression in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Non-invasive spinal decompression therapy in Eugene, OR at Absolute Wellness Center. Relief for chronic back pain, bulging discs, and spinal pressure. Call (541) 484-5777.";
-const URL = "https://awceugene.com/spinal-decompression/";
+const URL = "https://www.awceugene.com/spinal-decompression/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -46,8 +46,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
-    { name: "Services", item: "https://awceugene.com/services/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
+    { name: "Services", item: "https://www.awceugene.com/services/" },
     { name: "Spinal Decompression" },
   ],
 });

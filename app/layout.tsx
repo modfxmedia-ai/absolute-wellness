@@ -3,6 +3,7 @@ import { Raleway, Lato } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StructuredData from "./components/StructuredData";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -19,9 +20,34 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://awceugene.com"),
-  title: "Absolute Wellness Center",
-  description: "Regenerative Medicine in Eugene, OR",
+  metadataBase: new URL("https://www.awceugene.com"),
+  alternates: { canonical: "/" },
+  title: "Absolute Wellness Center | Eugene, OR",
+  description:
+    "Absolute Wellness Center provides regenerative medicine, chiropractic care, and IV therapy in Eugene, OR. Accepting new patients — call (541) 484-5777 or book online.",
+  openGraph: {
+    type: "website",
+    siteName: "Absolute Wellness Center",
+    locale: "en_US",
+    url: "https://www.awceugene.com",
+    title: "Absolute Wellness Center",
+    description:
+      "Absolute Wellness Center provides regenerative medicine, chiropractic care, and IV therapy in Eugene, OR. Accepting new patients — call (541) 484-5777 or book online.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Absolute Wellness Center - Regenerative Medicine in Eugene OR",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Absolute Wellness Center",
+    description:
+      "Absolute Wellness Center provides regenerative medicine, chiropractic care, and IV therapy in Eugene, OR. Accepting new patients — call (541) 484-5777 or book online.",
+  },
 };
 
 export default function RootLayout({
@@ -35,6 +61,7 @@ export default function RootLayout({
       className={`${raleway.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-[#0a0a0a]">
+        <StructuredData />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

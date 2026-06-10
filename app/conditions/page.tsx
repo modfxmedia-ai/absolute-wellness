@@ -9,11 +9,11 @@ import { buildPageGraph } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
 
-// Title matches live awceugene.com exactly (double space after "Conditions").
-const TITLE = "Conditions  in Eugene, OR | Absolute Wellness Center";
+// Title matches live awceugene.com.
+const TITLE = "Conditions in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Absolute Wellness Center treats back pain, neck pain, neuropathy, knee pain, hormonal imbalance, whiplash, and more in Eugene, OR. Call (541) 484-5777 today.";
-const URL = "https://awceugene.com/conditions/";
+const URL = "https://www.awceugene.com/conditions/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -45,7 +45,7 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
     { name: "Conditions" },
   ],
 });

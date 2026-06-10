@@ -5,9 +5,9 @@ import { Icons, SectionPill } from "@/components/home/ui";
 import { ConditionProse } from "@/components/ConditionSections";
 import { buildPageGraph } from "@/lib/site-schema";
 
-const TITLE = "Accessibility  in Eugene, OR | Absolute Wellness Center";
+const TITLE = "Accessibility in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION = "Accessibility -";
-const URL = "https://awceugene.com/accessibility/";
+const URL = "https://www.awceugene.com/accessibility/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -39,7 +39,7 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
     { name: "Accessibility" },
   ],
 });

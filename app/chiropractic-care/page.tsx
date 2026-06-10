@@ -14,7 +14,7 @@ import { buildPageGraph } from "@/lib/site-schema";
 const TITLE = "Chiropractic Care in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Chiropractic care in Eugene, OR at Absolute Wellness Center. Correcting misalignments, improving spinal health, and reducing pain naturally. Call (541) 484-5777.";
-const URL = "https://awceugene.com/chiropractic-care/";
+const URL = "https://www.awceugene.com/chiropractic-care/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -46,8 +46,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
-    { name: "Services", item: "https://awceugene.com/services/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
+    { name: "Services", item: "https://www.awceugene.com/services/" },
     { name: "Chiropractic Care" },
   ],
 });

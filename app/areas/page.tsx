@@ -6,7 +6,7 @@ import { CITIES, SERVICES, REGIONS, ORIGIN } from "@/lib/areas";
 import { buildPageGraph, medicalBusinessSchema } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
-const SITE = "https://awceugene.com";
+const SITE = "https://www.awceugene.com";
 
 const TITLE = "Areas We Serve | Absolute Wellness Center — Eugene, OR";
 const DESCRIPTION = `Absolute Wellness Center proudly serves Eugene, Springfield, and 50+ Oregon cities with BHRT, medical weight loss, neuropathy treatment, chiropractic care, and more. Call ${ORIGIN.phone}.`;

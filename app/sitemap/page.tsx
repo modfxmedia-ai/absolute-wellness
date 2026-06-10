@@ -6,9 +6,9 @@ import { Icons, SectionPill } from "@/components/home/ui";
 import { buildPageGraph } from "@/lib/site-schema";
 import { CITIES, SERVICES } from "@/lib/areas";
 
-const TITLE = "Sitemap  in Eugene, OR | Absolute Wellness Center";
+const TITLE = "Sitemap in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION = "Sitemap -";
-const URL = "https://awceugene.com/sitemap/";
+const URL = "https://www.awceugene.com/sitemap/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -40,7 +40,7 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
     { name: "Sitemap" },
   ],
 });

@@ -17,7 +17,7 @@ const TITLE =
   "Regenerative Medicine in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Absolute Wellness Center is a skilled Regenerative Medicine in Eugene, OR. Accepting new appointments. Call today or request an appointment on our website.";
-const URL = "https://awceugene.com/";
+const URL = "https://www.awceugene.com/";
 const BRAND = "#7E9146";
 
 export const metadata: Metadata = {
@@ -50,26 +50,26 @@ const pageSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://awceugene.com/",
-      url: "https://awceugene.com/",
+      "@id": "https://www.awceugene.com/",
+      url: "https://www.awceugene.com/",
       name: TITLE,
-      isPartOf: { "@id": "https://awceugene.com/#website" },
+      isPartOf: { "@id": "https://www.awceugene.com/#website" },
       description: DESCRIPTION,
-      breadcrumb: { "@id": "https://awceugene.com/#breadcrumb" },
+      breadcrumb: { "@id": "https://www.awceugene.com/#breadcrumb" },
       inLanguage: "en-US",
       potentialAction: [
-        { "@type": "ReadAction", target: ["https://awceugene.com/"] },
+        { "@type": "ReadAction", target: ["https://www.awceugene.com/"] },
       ],
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://awceugene.com/#breadcrumb",
+      "@id": "https://www.awceugene.com/#breadcrumb",
       itemListElement: [{ "@type": "ListItem", position: 1, name: "Home" }],
     },
     {
       "@type": "WebSite",
-      "@id": "https://awceugene.com/#website",
-      url: "https://awceugene.com/",
+      "@id": "https://www.awceugene.com/#website",
+      url: "https://www.awceugene.com/",
       name: "Absolute Wellness Center",
       description: "Regenerative Medicine in Eugene, OR",
       inLanguage: "en-US",

@@ -33,15 +33,28 @@ const ROUTES = [
   "/whiplash/",
 ];
 
+const PRIMARY_PAGES = new Set([
+  "/about/",
+  "/services/",
+  "/conditions/",
+  "/contact/",
+  "/appointments/",
+  "/new-patients/",
+  "/areas/",
+  "/chiropractic-care/",
+  "/nutritional-ivs/",
+  "/medical-weight-loss/",
+]);
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://awceugene.com";
+  const base = "https://www.awceugene.com";
   const now = new Date();
 
   const core = ROUTES.map((path) => ({
     url: `${base}${path}`,
     lastModified: now,
-    changeFrequency: (path === "/" ? "weekly" : "monthly") as "weekly" | "monthly",
-    priority: path === "/" ? 1 : 0.7,
+    changeFrequency: "monthly" as const,
+    priority: path === "/" ? 1.0 : PRIMARY_PAGES.has(path) ? 0.8 : 0.7,
   }));
 
   const cityHubs = CITIES.map((c) => ({

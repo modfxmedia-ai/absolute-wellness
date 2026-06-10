@@ -16,7 +16,7 @@ const BRAND = "#7E9146";
 const TITLE = "Medical Weight Loss in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Medical weight loss programs in Eugene, OR including semaglutide (Wegovy/Ozempic), phentermine, and more at Absolute Wellness Center. Call (541) 484-5777.";
-const URL = "https://awceugene.com/medical-weight-loss/";
+const URL = "https://www.awceugene.com/medical-weight-loss/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -48,8 +48,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
-    { name: "Services", item: "https://awceugene.com/services/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
+    { name: "Services", item: "https://www.awceugene.com/services/" },
     { name: "Medical Weight Loss" },
   ],
 });

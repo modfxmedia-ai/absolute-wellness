@@ -14,7 +14,7 @@ import { buildPageGraph } from "@/lib/site-schema";
 const TITLE = "Auto Injury in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Auto accident injury care in Eugene, OR. Chiropractic adjustments and rehab to prevent chronic pain after a crash. Absolute Wellness Center — (541) 484-5777.";
-const URL = "https://awceugene.com/auto-injury/";
+const URL = "https://www.awceugene.com/auto-injury/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -46,8 +46,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
-    { name: "Services", item: "https://awceugene.com/services/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
+    { name: "Services", item: "https://www.awceugene.com/services/" },
     { name: "Auto Injury" },
   ],
 });

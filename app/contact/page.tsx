@@ -12,7 +12,7 @@ const TITLE =
   "Regenerative Medicine Near Me - Contact Us | Absolute Wellness Center";
 const DESCRIPTION =
   "Absolute Wellness Center - Visit our Regenerative Medicine clinic at 2286 Oakmont Way, Eugene, OR 97401 or call (541) 484-5777 to schedule!";
-const URL = "https://awceugene.com/contact/";
+const URL = "https://www.awceugene.com/contact/";
 const MAP_HREF = "https://goo.gl/maps/ntB3jp7GHC18xwkQ8";
 const FB_HREF = "https://www.facebook.com/AbsoluteWellnessCenter";
 const MAP_EMBED =
@@ -48,7 +48,7 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
     { name: "Contact" },
   ],
 });

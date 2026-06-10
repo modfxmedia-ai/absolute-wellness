@@ -15,7 +15,7 @@ const TITLE =
   "Trigger Point Injections in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Trigger point injections for fibromyalgia, tension headaches, and muscle pain in Eugene, OR. Safe, effective relief at Absolute Wellness Center. (541) 484-5777.";
-const URL = "https://awceugene.com/trigger-point-injections/";
+const URL = "https://www.awceugene.com/trigger-point-injections/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -47,8 +47,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
-    { name: "Services", item: "https://awceugene.com/services/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
+    { name: "Services", item: "https://www.awceugene.com/services/" },
     { name: "Trigger Point Injections" },
   ],
 });

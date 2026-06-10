@@ -13,7 +13,7 @@ import {
 import { buildPageGraph, medicalBusinessSchema } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
-const SITE = "https://awceugene.com";
+const SITE = "https://www.awceugene.com";
 
 type Params = Promise<{ city: string }>;
 

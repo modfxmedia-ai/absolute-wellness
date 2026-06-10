@@ -1,7 +1,7 @@
 // Shared schema fragments that mirror the live awceugene.com JSON-LD graph.
 // Every subpage embeds WebPage + BreadcrumbList + this WebSite + LocalBusiness.
 
-export const SITE_URL = "https://awceugene.com";
+export const SITE_URL = "https://www.awceugene.com";
 
 export const websiteSchema = {
   "@type": "WebSite",

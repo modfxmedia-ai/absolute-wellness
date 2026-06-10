@@ -5,10 +5,10 @@ import { Icons, SectionPill } from "@/components/home/ui";
 import { ConditionProse } from "@/components/ConditionSections";
 import { buildPageGraph } from "@/lib/site-schema";
 
-const TITLE = "Privacy Policy  in Eugene, OR | Absolute Wellness Center";
+const TITLE = "Privacy Policy in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Privacy Policy - Absolute Wellness Center | Notice of Privacy Practices Effective 08/04/2020 Your Information. Your Rights. Our Responsibilities. This notice describes how";
-const URL = "https://awceugene.com/privacy-policy/";
+const URL = "https://www.awceugene.com/privacy-policy/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -40,7 +40,7 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Home", item: "https://www.awceugene.com/" },
     { name: "Privacy Policy" },
   ],
 });
