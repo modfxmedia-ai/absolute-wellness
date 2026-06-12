@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import Reveal from "@/components/home/Reveal";
 import { Icons, SectionPill } from "@/components/home/ui";
+import { linkifyPhone } from "@/lib/linkify-phone";
 
 const BRAND = "#7E9146";
 
@@ -55,7 +56,7 @@ export function ServiceBody({
             <Reveal delay={0.12}>
               <div className="mt-8 space-y-4 font-[family-name:var(--font-lato)] text-base leading-8 text-gray-600">
                 {paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
+                  <p key={i}>{linkifyPhone(p)}</p>
                 ))}
               </div>
             </Reveal>
@@ -180,7 +181,7 @@ export function HowWeHelp({
                 <h3 className="mt-5 font-[family-name:var(--font-raleway)] text-xl font-bold text-white">
                   {c.title}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-gray-400">{c.body}</p>
+                <p className="mt-2 text-sm leading-6 text-gray-400">{linkifyPhone(c.body)}</p>
               </div>
             </Reveal>
           ))}
@@ -342,7 +343,7 @@ export function GreenCTABand({
           </h2>
         </Reveal>
         <Reveal delay={0.08}>
-          <p className="mt-3 text-base leading-7 text-white/90">{body}</p>
+          <p className="mt-3 text-base leading-7 text-white/90">{linkifyPhone(body)}</p>
         </Reveal>
         <Reveal delay={0.14}>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

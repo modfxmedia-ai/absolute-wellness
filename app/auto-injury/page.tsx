@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
-import { Icons } from "@/components/home/ui";
+import { Icons, SectionPill } from "@/components/home/ui";
 import {
   ServiceBody,
   HowWeHelp,
@@ -9,7 +10,15 @@ import {
   ProcessTimeline,
 } from "@/components/ServiceSections";
 import ServiceFAQ from "@/components/ServiceFAQ";
+import {
+  DriftingOrbs,
+  CalendarGlow,
+  MapPinPulse,
+  AnimatedTickRow,
+} from "@/components/MotionAccents";
 import { buildPageGraph } from "@/lib/site-schema";
+
+const BRAND = "#7E9146";
 
 const TITLE = "Auto Injury Care in Eugene, OR — Same-Day Appointments | Absolute Wellness Center";
 const DESCRIPTION =
@@ -52,6 +61,201 @@ const pageSchema = buildPageGraph({
   ],
 });
 
+/* ────────────────────────────────────────────────
+   Friendly scheduling card — motion graphics + clear CTAs
+   ──────────────────────────────────────────────── */
+function ScheduleCard() {
+  const trust = [
+    { icon: Icons.clock, label: "Seen Today" },
+    { icon: Icons.shield, label: "$0 Out-of-Pocket*" },
+    { icon: Icons.check, label: "PIP Billed Direct" },
+    { icon: Icons.user, label: "Attorney Coordination" },
+  ];
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#f7f9f2] via-white to-[#f0f4e8] py-24">
+      {/* gentle ambient motion */}
+      <DriftingOrbs className="opacity-60" />
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="relative overflow-hidden rounded-[28px] bg-white p-8 shadow-xl ring-1 ring-black/5 sm:p-12">
+          {/* soft brand glow inside the card */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-24 -top-24 h-[360px] w-[360px] rounded-full opacity-[0.12] blur-3xl"
+            style={{ background: `radial-gradient(circle, ${BRAND} 0%, transparent 70%)` }}
+          />
+
+          <div className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.1fr]">
+            {/* LEFT — motion graphics column */}
+            <div className="flex flex-col items-center gap-6">
+              <div className="relative">
+                <div
+                  aria-hidden
+                  className="absolute -inset-6 -z-10 rounded-full opacity-50 blur-3xl"
+                  style={{ background: `radial-gradient(circle, rgba(126,145,70,0.35) 0%, transparent 70%)` }}
+                />
+                {/* dark wrapper so CalendarGlow reads well on light bg */}
+                <div
+                  className="rounded-2xl p-1"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #5a6a30 0%, #3d4a1f 100%)",
+                  }}
+                >
+                  <div className="rounded-[14px] bg-[#0a0a0a] p-3">
+                    <CalendarGlow size={260} />
+                  </div>
+                </div>
+                <div
+                  className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-white px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] shadow-md ring-1 ring-black/5"
+                  style={{ color: BRAND }}
+                >
+                  <span className="inline-flex items-center gap-1.5">
+                    <span
+                      className="inline-flex h-2 w-2 rounded-full motion-safe:animate-pulse"
+                      style={{ backgroundColor: BRAND }}
+                    />
+                    Availability Today
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-6 flex items-center gap-3">
+                <MapPinPulse size={56} />
+                <div className="text-left">
+                  <div
+                    className="text-[10px] font-bold uppercase tracking-[0.2em]"
+                    style={{ color: BRAND }}
+                  >
+                    Eugene, OR
+                  </div>
+                  <div className="font-[family-name:var(--font-raleway)] text-base font-bold text-gray-900">
+                    1740 Empire Park Dr.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT — copy + CTAs */}
+            <div>
+              <SectionPill icon={Icons.calendar("h-3.5 w-3.5")}>
+                Schedule Same-Day
+              </SectionPill>
+              <h2 className="mt-5 font-[family-name:var(--font-raleway)] text-4xl font-black leading-tight tracking-tight text-gray-900 sm:text-5xl">
+                Booking takes{" "}
+                <span style={{ color: BRAND }}>30 seconds.</span>
+                <br />
+                Healing starts today.
+              </h2>
+              <p className="mt-4 max-w-lg text-base leading-7 text-gray-600">
+                One quick call locks in your spot. We&apos;ll handle PIP
+                billing, paperwork, and attorney coordination — you just show
+                up and start feeling better.
+              </p>
+
+              {/* steps with animated ticks */}
+              <div className="mt-7 flex flex-wrap items-center gap-4">
+                <AnimatedTickRow />
+                <span
+                  className="font-[family-name:var(--font-raleway)] text-sm font-bold tracking-wide"
+                  style={{ color: "#3d4a1f" }}
+                >
+                  Call &nbsp;→&nbsp; Get Seen &nbsp;→&nbsp; We Bill PIP
+                </span>
+              </div>
+
+              {/* CTAs */}
+              <div className="mt-8 flex w-full flex-col gap-3 sm:flex-row">
+                <a
+                  href="tel:+15414845777"
+                  className="group relative inline-flex items-center justify-center gap-3 rounded-full px-7 py-5 font-[family-name:var(--font-raleway)] text-base font-black text-white shadow-[0_10px_30px_-12px_rgba(126,145,70,0.7)] transition-transform hover:scale-[1.03]"
+                  style={{ backgroundColor: BRAND }}
+                >
+                  <span
+                    aria-hidden
+                    className="absolute inset-0 -z-10 rounded-full opacity-50 motion-safe:animate-ping"
+                    style={{ background: BRAND }}
+                  />
+                  {Icons.phone("h-5 w-5")}
+                  <span className="flex flex-col items-start leading-tight">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/80">
+                      Tap To Call
+                    </span>
+                    <span>(541) 484-5777</span>
+                  </span>
+                </a>
+                <Link
+                  href="/appointments/"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border-2 px-7 py-5 font-[family-name:var(--font-raleway)] text-base font-black transition-colors hover:bg-[#7E9146] hover:text-white"
+                  style={{ borderColor: BRAND, color: BRAND }}
+                >
+                  Book Online
+                  {Icons.arrow("h-5 w-5")}
+                </Link>
+              </div>
+
+              {/* trust strip */}
+              <ul className="mt-8 grid grid-cols-2 gap-3 border-t border-black/5 pt-6 sm:grid-cols-2">
+                {trust.map((t) => (
+                  <li
+                    key={t.label}
+                    className="flex items-center gap-2.5 text-sm font-semibold text-gray-800"
+                  >
+                    <span
+                      className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-white"
+                      style={{ backgroundColor: BRAND }}
+                    >
+                      {t.icon("h-3.5 w-3.5")}
+                    </span>
+                    {t.label}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 text-xs text-gray-500">
+                *Most Oregon auto-accident patients pay nothing out of pocket.
+                Oregon PIP covers up to $15,000 in medical care regardless of
+                fault.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ────────────────────────────────────────────────
+   Sticky mobile call bar — always-visible scheduling CTA
+   ──────────────────────────────────────────────── */
+function StickyMobileCallBar() {
+  return (
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-black/10 bg-white/95 px-4 py-3 shadow-[0_-10px_30px_-12px_rgba(0,0,0,0.25)] backdrop-blur md:hidden">
+      <div className="flex items-center gap-2">
+        <a
+          href="tel:+15414845777"
+          className="relative flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-black text-white"
+          style={{ backgroundColor: BRAND }}
+        >
+          <span
+            aria-hidden
+            className="absolute inset-0 -z-10 rounded-full opacity-60 motion-safe:animate-ping"
+            style={{ background: BRAND }}
+          />
+          {Icons.phone("h-4 w-4")}
+          Call Now
+        </a>
+        <Link
+          href="/appointments/"
+          className="flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3 text-sm font-black border-2 transition-colors"
+          style={{ borderColor: BRAND, color: BRAND, backgroundColor: "white" }}
+        >
+          {Icons.calendar("h-4 w-4")}
+          Book Today
+        </Link>
+      </div>
+    </div>
+  );
+}
+
 export default function AutoInjuryPage() {
   return (
     <>
@@ -61,14 +265,19 @@ export default function AutoInjuryPage() {
       />
 
       <PageHero
-        title="Hurt in a Crash? Get Care Today."
-        subtitle="Same-day auto injury appointments in Eugene, OR. The longer you wait, the harder it gets — call (541) 484-5777 now and start your recovery."
-        badge="Same-Day Appointments"
+        title="Hurt in a Crash? Get Care TODAY."
+        subtitle="Same-day auto injury appointments in Eugene, OR. Every hour you wait, injuries get harder to treat — call (541) 484-5777 right now and we'll get you in today."
+        badge="Same-Day Appointments • Open Now"
         image="/images/Auto-Injuri.jpg"
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Services", href: "/services/" },
           { label: "Auto Injury" },
+        ]}
+        ctas={[
+          { label: "Call (541) 484-5777", href: "tel:+15414845777", variant: "call" },
+          { label: "Schedule Same-Day", href: "/appointments/", variant: "primary" },
+          { label: "Contact Us", href: "/contact/", variant: "outline" },
         ]}
       />
 
@@ -79,11 +288,11 @@ export default function AutoInjuryPage() {
         headingAccent="First 72 Hours."
         image="/images/Auto-Injuri.jpg"
         imageAlt="Auto injury recovery and chiropractic care at Absolute Wellness Center in Eugene, OR"
-        ctaLabel="Book Same-Day Appointment"
+        ctaLabel="Book My Same-Day Visit"
         paragraphs={[
           "Even a \"minor\" fender-bender can tear ligaments, jam joints, and inflame nerves. Skip treatment and a week-old injury can turn into months of headaches, neck pain, and disability. Research is clear: patients who start care within the first 72 hours recover faster and have far fewer long-term symptoms.",
           "We see auto-accident patients on the same day — no waiting weeks for an opening. Our team handles the chiropractic adjustments, soft-tissue therapy, and rehab from start to finish, so you focus on getting better while we handle the paperwork.",
-          "Oregon PIP covers up to $15,000 of injury treatment regardless of fault. In most cases there's no out-of-pocket cost to you — we bill PIP directly and coordinate with your attorney if you have one.",
+          "Oregon PIP covers up to $15,000 of injury treatment regardless of fault. In most cases there's no out-of-pocket cost to you — we bill PIP directly and coordinate with your attorney if you have one. Call (541) 484-5777 right now and lock in a same-day appointment.",
         ]}
         extra={
           <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -111,6 +320,8 @@ export default function AutoInjuryPage() {
           </ul>
         }
       />
+
+      <ScheduleCard />
 
       <HowWeHelp
         heading="What to Do"
@@ -157,9 +368,11 @@ export default function AutoInjuryPage() {
       />
 
       <GreenCTABand
-        heading="Were you in an accident? Call now."
-        body="Same-day appointments. Direct PIP billing. We coordinate with your attorney. Don't let an injury become a lifelong problem — call (541) 484-5777 today."
+        heading="Stop waiting. Start healing today."
+        body="Same-day appointments. Direct PIP billing. Attorney coordination. Don't let one phone call be the difference between full recovery and chronic pain — call (541) 484-5777 right now."
       />
+
+      <StickyMobileCallBar />
     </>
   );
 }

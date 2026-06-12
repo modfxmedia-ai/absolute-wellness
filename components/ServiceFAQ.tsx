@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Reveal from "@/components/home/Reveal";
 import { Icons, SectionPill } from "@/components/home/ui";
+import { linkifyPhone } from "@/lib/linkify-phone";
 
 const BRAND = "#7E9146";
 
@@ -113,7 +114,7 @@ export default function ServiceFAQ({
                         className="overflow-hidden"
                       >
                         <p className="px-6 pb-6 font-[family-name:var(--font-lato)] text-base leading-7 text-gray-600">
-                          {f.a}
+                          {linkifyPhone(f.a)}
                         </p>
                       </motion.div>
                     )}

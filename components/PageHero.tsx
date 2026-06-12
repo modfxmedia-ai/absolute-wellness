@@ -2,10 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/home/Reveal";
 import { DotPattern } from "@/components/home/decor";
+import { Icons } from "@/components/home/ui";
+import { linkifyPhone } from "@/lib/linkify-phone";
 
 const BRAND = "#7E9146";
 
 type Crumb = { label: string; href?: string };
+
+type Cta = {
+  label: string;
+  href: string;
+  variant?: "primary" | "outline" | "call";
+};
 
 type Props = {
   title: string;
@@ -13,6 +21,7 @@ type Props = {
   badge?: string;
   image: string;
   breadcrumbs?: Crumb[];
+  ctas?: Cta[];
 };
 
 export default function PageHero({
@@ -21,6 +30,7 @@ export default function PageHero({
   badge,
   image,
   breadcrumbs,
+  ctas,
 }: Props) {
   return (
     <section className="relative overflow-hidden bg-[#0a0a0a] text-white">
@@ -90,8 +100,59 @@ export default function PageHero({
         {subtitle && (
           <Reveal delay={0.14}>
             <p className="mt-4 max-w-2xl text-lg leading-8 text-gray-300">
-              {subtitle}
+              {linkifyPhone(subtitle)}
             </p>
+          </Reveal>
+        )}
+
+        {ctas && ctas.length > 0 && (
+          <Reveal delay={0.2}>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              {ctas.map((c) => {
+                const variant = c.variant ?? "primary";
+                if (variant === "call") {
+                  return (
+                    <a
+                      key={c.label}
+                      href={c.href}
+                      className="relative inline-flex items-center gap-2 rounded-full px-7 py-4 font-[family-name:var(--font-raleway)] text-sm font-black text-white shadow-[0_10px_30px_-12px_rgba(126,145,70,0.7)] transition-transform hover:scale-[1.03]"
+                      style={{ backgroundColor: BRAND }}
+                    >
+                      <span
+                        aria-hidden
+                        className="absolute inset-0 -z-10 rounded-full opacity-50 motion-safe:animate-ping"
+                        style={{ background: BRAND }}
+                      />
+                      {Icons.phone("h-4 w-4")}
+                      {c.label}
+                    </a>
+                  );
+                }
+                if (variant === "outline") {
+                  return (
+                    <Link
+                      key={c.label}
+                      href={c.href}
+                      className="inline-flex items-center gap-2 rounded-full border-2 border-white/80 px-7 py-4 font-[family-name:var(--font-raleway)] text-sm font-black text-white transition-colors hover:bg-white hover:text-[#3d4a1f]"
+                    >
+                      {c.label}
+                      {Icons.arrow("h-4 w-4")}
+                    </Link>
+                  );
+                }
+                return (
+                  <Link
+                    key={c.label}
+                    href={c.href}
+                    className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 font-[family-name:var(--font-raleway)] text-sm font-black text-[#3d4a1f] transition-transform hover:scale-[1.03]"
+                  >
+                    {Icons.calendar("h-4 w-4")}
+                    {c.label}
+                    {Icons.arrow("h-4 w-4")}
+                  </Link>
+                );
+              })}
+            </div>
           </Reveal>
         )}
       </div>
