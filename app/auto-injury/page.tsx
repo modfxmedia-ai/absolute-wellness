@@ -129,7 +129,7 @@ function ScheduleCard() {
                     Eugene, OR
                   </div>
                   <div className="font-[family-name:var(--font-raleway)] text-base font-bold text-gray-900">
-                    1740 Empire Park Dr.
+                    2286 Oakmont Way
                   </div>
                 </div>
               </div>
