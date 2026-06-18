@@ -20,9 +20,9 @@ import { buildPageGraph } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
 
-const TITLE = "Auto Injury Care in Eugene, OR — Same-Day Appointments | Absolute Wellness Center";
+const TITLE = "Auto Injury Treatment in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
-  "Hurt in a crash? Same-day auto injury appointments in Eugene, OR. We coordinate with your PIP insurance and attorney — call (541) 484-5777 now.";
+  "Injured in a car accident? Absolute Wellness Center in Eugene, OR treats auto accident injuries including whiplash, back pain, and soft tissue damage. Oregon PIP insurance accepted. Call (541) 484-5777.";
 const URL = "https://www.awceugene.com/auto-injury/";
 
 export const metadata: Metadata = {
@@ -265,7 +265,7 @@ export default function AutoInjuryPage() {
       />
 
       <PageHero
-        title="Hurt in a Crash? Get Care TODAY."
+        title="Auto Injury Treatment in Eugene, OR — Get Care TODAY."
         subtitle="Same-day auto injury appointments in Eugene, OR. Every hour you wait, injuries get harder to treat — call (541) 484-5777 right now and we'll get you in today."
         badge="Same-Day Appointments • Open Now"
         image="/images/Auto-Injuri.jpg"
@@ -295,6 +295,7 @@ export default function AutoInjuryPage() {
           "Oregon PIP covers up to $15,000 of injury treatment regardless of fault. In most cases there's no out-of-pocket cost to you — we bill PIP directly and coordinate with your attorney if you have one. Call (541) 484-5777 right now and lock in a same-day appointment.",
         ]}
         extra={
+          <>
           <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {[
               "Same-day appointments available",
@@ -317,7 +318,17 @@ export default function AutoInjuryPage() {
                 {item}
               </li>
             ))}
-          </ul>
+            </ul>
+            <p className="mt-6 text-sm leading-7 text-gray-600">
+              <Link
+                href="/auto-accident-chiropractor-eugene-or/"
+                className="font-semibold text-[#7E9146] underline underline-offset-4 hover:text-[#5a6a30]"
+              >
+                Learn more about our auto accident chiropractic care in Eugene, OR
+              </Link>
+              .
+            </p>
+          </>
         }
       />
 
@@ -364,6 +375,8 @@ export default function AutoInjuryPage() {
           { q: "Do you work with attorneys?", a: "Yes. If you have an attorney, we coordinate exam findings, treatment notes, and billing records with their office. If you don't have one and need a referral, we can point you to attorneys we trust." },
           { q: "What if my pain didn't start until weeks later?", a: "Delayed-onset pain is extremely common after a crash — adrenaline and inflammation can mask injuries for days or weeks. Come in. We can still evaluate you and start care." },
           { q: "What injuries do you treat?", a: "Whiplash, neck and back pain, headaches, shoulder injuries, low-back strains, sciatica, soft-tissue injuries, and the chronic complications that follow untreated crashes." },
+          { q: "Is auto injury chiropractic care covered by Oregon insurance?", a: "Oregon PIP coverage typically includes chiropractic and physical therapy for auto injuries. We work with most major insurance carriers." },
+          { q: "What auto accident injuries do you treat in Eugene?", a: "We treat whiplash, back pain, neck pain, shoulder injuries, soft tissue damage, herniated discs, and headaches resulting from car accidents." },
         ]}
       />
 

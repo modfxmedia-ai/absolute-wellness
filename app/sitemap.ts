@@ -7,6 +7,7 @@ const ROUTES = [
   "/accessibility/",
   "/appointments/",
   "/areas/",
+  "/auto-accident-chiropractor-eugene-or/",
   "/auto-injury/",
   "/back-pain/",
   "/bioidentical-hormones/",

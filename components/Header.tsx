@@ -18,6 +18,7 @@ const SERVICES: NavChild[] = [
   { label: "Bioidentical Hormones", href: "/bioidentical-hormones/" },
   { label: "Chiropractic Care", href: "/chiropractic-care/" },
   { label: "Auto Injury", href: "/auto-injury/" },
+  { label: "Auto Accident", href: "/auto-accident-chiropractor-eugene-or/" },
 ];
 
 const CONDITIONS: NavChild[] = [

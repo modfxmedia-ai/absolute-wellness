@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/home/Reveal";
 import { Icons, SectionPill } from "@/components/home/ui";
@@ -13,9 +14,9 @@ import {
 } from "@/components/ConditionSections";
 import { buildPageGraph } from "@/lib/site-schema";
 
-const TITLE = "Whiplash in Eugene, OR | Absolute Wellness Center";
+const TITLE = "Whiplash Treatment in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
-  "Whiplash treatment in Eugene, OR at Absolute Wellness Center. Natural care for auto-accident neck injuries, muscle fatigue, and tissue damage. Call (541) 484-5777.";
+  "Suffering from whiplash after a car accident in Eugene, OR? Absolute Wellness Center provides expert chiropractic and regenerative treatment for whiplash injuries. Same-week appointments. (541) 484-5777.";
 const URL = "https://www.awceugene.com/whiplash/";
 
 export const metadata: Metadata = {
@@ -105,6 +106,22 @@ export default function WhiplashPage() {
                   result in pain and stiffness. Severe whiplash can also be
                   associated with injury to the intervertebral joints, discs,
                   ligaments, muscles, and nerve roots.
+                </p>
+                <p>
+                  Our Eugene, OR whiplash treatment combines gentle
+                  chiropractic adjustments, soft-tissue therapy, and
+                  regenerative care to address the root of your injury. Whether
+                  you need auto accident whiplash Eugene care after a rear-end
+                  collision or relief from a car accident neck injury Eugene OR
+                  residents trust, our team documents every finding and builds a
+                  recovery plan around you.{" "}
+                  <Link
+                    href="/auto-accident-chiropractor-eugene-or/"
+                    className="font-semibold text-[#7E9146] underline underline-offset-4 hover:text-[#5a6a30]"
+                  >
+                    Comprehensive auto accident care in Eugene, OR
+                  </Link>{" "}
+                  is available for every crash-related injury.
                 </p>
               </ConditionProse>
             </Reveal>

@@ -52,6 +52,7 @@ const PAGES: SitemapItem[] = [
   { label: "Accessibility", href: "/accessibility/" },
   { label: "Appointments", href: "/appointments/" },
   { label: "Areas We Serve", href: "/areas/" },
+  { label: "Auto Accident Chiropractor", href: "/auto-accident-chiropractor-eugene-or/" },
   { label: "Auto Injury", href: "/auto-injury/" },
   { label: "Back Pain", href: "/back-pain/" },
   { label: "Bioidentical Hormones", href: "/bioidentical-hormones/" },

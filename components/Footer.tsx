@@ -10,6 +10,7 @@ const SERVICE_LINKS = [
   { label: "Physical Therapy", href: "/physical-therapy/" },
   { label: "Nutritional IVs", href: "/nutritional-ivs/" },
   { label: "Joint Injections", href: "/joint-injections/" },
+  { label: "Auto Accident", href: "/auto-accident-chiropractor-eugene-or/" },
   { label: "View All Services", href: "/services/" },
 ];
 
