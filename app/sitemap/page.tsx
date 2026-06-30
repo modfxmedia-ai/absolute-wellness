@@ -8,7 +8,7 @@ import { CITIES, SERVICES } from "@/lib/areas";
 
 const TITLE = "Sitemap in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION = "Sitemap -";
-const URL = "https://www.awceugene.com/sitemap/";
+const URL = "https://awceugene.com/sitemap/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -40,7 +40,7 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
+    { name: "Home", item: "https://awceugene.com/" },
     { name: "Sitemap" },
   ],
 });

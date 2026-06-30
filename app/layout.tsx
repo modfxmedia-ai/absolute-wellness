@@ -20,7 +20,7 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.awceugene.com"),
+  metadataBase: new URL("https://awceugene.com"),
   alternates: { canonical: "/" },
   title: "Absolute Wellness Center | Eugene, OR",
   description:
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     siteName: "Absolute Wellness Center",
     locale: "en_US",
-    url: "https://www.awceugene.com",
+    url: "https://awceugene.com",
     title: "Absolute Wellness Center",
     description:
       "Absolute Wellness Center provides regenerative medicine, chiropractic care, and IV therapy in Eugene, OR. Accepting new patients — call (541) 484-5777 or book online.",

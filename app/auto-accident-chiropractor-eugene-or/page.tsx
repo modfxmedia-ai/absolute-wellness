@@ -16,7 +16,7 @@ const BRAND = "#7E9146";
 const TITLE = "Auto Accident Chiropractor in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Hurt in a car accident in Eugene, OR? Absolute Wellness Center treats whiplash, back pain, neck injuries, and soft tissue damage with chiropractic care and regenerative medicine. Same-week appointments. Call (541) 484-5777.";
-const URL = "https://www.awceugene.com/auto-accident-chiropractor-eugene-or/";
+const URL = "https://awceugene.com/auto-accident-chiropractor-eugene-or/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -48,8 +48,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
-    { name: "Services", item: "https://www.awceugene.com/services/" },
+    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Services", item: "https://awceugene.com/services/" },
     { name: "Auto Accident Chiropractor" },
   ],
 });

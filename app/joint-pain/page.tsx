@@ -16,7 +16,7 @@ import { buildPageGraph } from "@/lib/site-schema";
 const TITLE = "Joint Pain in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Joint pain treatment in Eugene, OR — acute and chronic care for arthritis, dislocation, and inflammation at Absolute Wellness Center. Call (541) 484-5777.";
-const URL = "https://www.awceugene.com/joint-pain/";
+const URL = "https://awceugene.com/joint-pain/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -48,8 +48,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
-    { name: "Conditions", item: "https://www.awceugene.com/conditions/" },
+    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Conditions", item: "https://awceugene.com/conditions/" },
     { name: "Joint Pain" },
   ],
 });

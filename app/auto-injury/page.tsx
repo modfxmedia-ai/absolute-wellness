@@ -23,7 +23,7 @@ const BRAND = "#7E9146";
 const TITLE = "Auto Injury Treatment in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Injured in a car accident? Absolute Wellness Center in Eugene, OR treats auto accident injuries including whiplash, back pain, and soft tissue damage. Oregon PIP insurance accepted. Call (541) 484-5777.";
-const URL = "https://www.awceugene.com/auto-injury/";
+const URL = "https://awceugene.com/auto-injury/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -55,8 +55,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
-    { name: "Services", item: "https://www.awceugene.com/services/" },
+    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Services", item: "https://awceugene.com/services/" },
     { name: "Auto Injury" },
   ],
 });

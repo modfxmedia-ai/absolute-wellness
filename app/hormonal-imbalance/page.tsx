@@ -16,7 +16,7 @@ import { buildPageGraph } from "@/lib/site-schema";
 const TITLE = "Hormonal Imbalance in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Hormonal imbalance care in Eugene, OR. Restore healthy hormone levels for metabolism, sleep, mood, and more at Absolute Wellness Center. Call (541) 484-5777.";
-const URL = "https://www.awceugene.com/hormonal-imbalance/";
+const URL = "https://awceugene.com/hormonal-imbalance/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -48,8 +48,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
-    { name: "Conditions", item: "https://www.awceugene.com/conditions/" },
+    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Conditions", item: "https://awceugene.com/conditions/" },
     { name: "Hormonal Imbalance" },
   ],
 });

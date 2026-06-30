@@ -17,7 +17,7 @@ import { buildPageGraph } from "@/lib/site-schema";
 const TITLE = "Whiplash Treatment in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Suffering from whiplash after a car accident in Eugene, OR? Absolute Wellness Center provides expert chiropractic and regenerative treatment for whiplash injuries. Same-week appointments. (541) 484-5777.";
-const URL = "https://www.awceugene.com/whiplash/";
+const URL = "https://awceugene.com/whiplash/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -49,8 +49,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
-    { name: "Conditions", item: "https://www.awceugene.com/conditions/" },
+    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Conditions", item: "https://awceugene.com/conditions/" },
     { name: "Whiplash" },
   ],
 });

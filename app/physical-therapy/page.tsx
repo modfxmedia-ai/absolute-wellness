@@ -14,7 +14,7 @@ import { buildPageGraph } from "@/lib/site-schema";
 const TITLE = "Physical Therapy in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Physical therapy and therapeutic exercise at Absolute Wellness Center in Eugene, OR. Injury rehab, mobility, balance, and pain relief. Call (541) 484-5777.";
-const URL = "https://www.awceugene.com/physical-therapy/";
+const URL = "https://awceugene.com/physical-therapy/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -46,8 +46,8 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
-    { name: "Services", item: "https://www.awceugene.com/services/" },
+    { name: "Home", item: "https://awceugene.com/" },
+    { name: "Services", item: "https://awceugene.com/services/" },
     { name: "Physical Therapy" },
   ],
 });

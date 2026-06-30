@@ -5,8 +5,16 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "awceugene.com" },
-      { protocol: "https", hostname: "www.awceugene.com" },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/sitemap_index.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+    ];
   },
 };
 

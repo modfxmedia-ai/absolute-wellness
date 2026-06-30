@@ -13,7 +13,7 @@ const BRAND = "#7E9146";
 const TITLE = "Appointments in Eugene, OR | Absolute Wellness Center";
 const DESCRIPTION =
   "Schedule an appointment at Absolute Wellness Center in Eugene, OR. Request online or call (541) 484-5777. Same-week appointments available.";
-const URL = "https://www.awceugene.com/appointments/";
+const URL = "https://awceugene.com/appointments/";
 const MAP_HREF = "https://goo.gl/maps/ntB3jp7GHC18xwkQ8";
 const MAP_EMBED =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2866.773763373674!2d-123.0786738238013!3d44.06738007108552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c11e43d57f03a5%3A0x8521ca537ea0eee8!2sAbsolute%20Wellness%20Center!5e0!3m2!1sen!2sba!4v1691417245166!5m2!1sen!2sba";
@@ -48,7 +48,7 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
+    { name: "Home", item: "https://awceugene.com/" },
     { name: "Appointments" },
   ],
 });

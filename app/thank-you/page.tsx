@@ -10,7 +10,7 @@ const BRAND = "#7E9146";
 const TITLE = "Thank You | Absolute Wellness Center";
 const DESCRIPTION =
   "Thank you for contacting Absolute Wellness Center in Eugene, OR. We've received your request and will be in touch shortly. For urgent matters, call (541) 484-5777.";
-const URL = "https://www.awceugene.com/thank-you/";
+const URL = "https://awceugene.com/thank-you/";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -41,7 +41,7 @@ const pageSchema = buildPageGraph({
   name: TITLE,
   description: DESCRIPTION,
   breadcrumb: [
-    { name: "Home", item: "https://www.awceugene.com/" },
+    { name: "Home", item: "https://awceugene.com/" },
     { name: "Thank You" },
   ],
 });

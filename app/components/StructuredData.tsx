@@ -3,7 +3,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "MedicalBusiness"],
     name: "Absolute Wellness Center",
-    url: "https://www.awceugene.com",
+    url: "https://awceugene.com",
     telephone: "+1-541-484-5777",
     address: {
       "@type": "PostalAddress",

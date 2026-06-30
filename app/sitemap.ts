@@ -48,7 +48,7 @@ const PRIMARY_PAGES = new Set([
 ]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.awceugene.com";
+  const base = "https://awceugene.com";
   const now = new Date();
 
   const core = ROUTES.map((path) => ({
