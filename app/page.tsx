@@ -12,6 +12,7 @@ import ServicesGrid from "@/components/home/ServicesGrid";
 import AnimatedCounter from "@/components/home/AnimatedCounter";
 import { DotPattern, GridPattern, WaveDivider } from "@/components/home/decor";
 import { Icons, SectionPill } from "@/components/home/ui";
+import { medicalBusinessSchema } from "@/lib/site-schema";
 
 const TITLE =
   "Regenerative Medicine in Eugene, OR | Absolute Wellness Center";
@@ -54,6 +55,7 @@ const pageSchema = {
       url: "https://awceugene.com/",
       name: TITLE,
       isPartOf: { "@id": "https://awceugene.com/#website" },
+      about: { "@id": "https://awceugene.com/#medicalbusiness" },
       description: DESCRIPTION,
       breadcrumb: { "@id": "https://awceugene.com/#breadcrumb" },
       inLanguage: "en-US",
@@ -74,6 +76,7 @@ const pageSchema = {
       description: "Regenerative Medicine in Eugene, OR",
       inLanguage: "en-US",
     },
+    medicalBusinessSchema,
   ],
 };
 

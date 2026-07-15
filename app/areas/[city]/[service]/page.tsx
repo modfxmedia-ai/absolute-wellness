@@ -13,7 +13,7 @@ import {
   getRelatedServices,
   nearbyCities,
 } from "@/lib/areas";
-import { buildPageGraph, buildServiceSchema, medicalBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph, buildServiceSchema } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
 const SITE = "https://awceugene.com";
@@ -109,7 +109,6 @@ export default async function CityServicePage({ params }: { params: Params }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 

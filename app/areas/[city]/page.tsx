@@ -10,7 +10,7 @@ import {
   getCity,
   nearbyCities,
 } from "@/lib/areas";
-import { buildPageGraph, medicalBusinessSchema } from "@/lib/site-schema";
+import { buildPageGraph } from "@/lib/site-schema";
 
 const BRAND = "#7E9146";
 const SITE = "https://awceugene.com";
@@ -66,7 +66,6 @@ export default async function CityHubPage({ params }: { params: Params }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalBusinessSchema) }} />
 
       <PageHero
         title={`Wellness Care for ${city.name}, OR`}

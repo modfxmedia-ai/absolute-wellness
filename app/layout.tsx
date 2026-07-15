@@ -4,7 +4,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StructuredData from "./components/StructuredData";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -62,7 +61,6 @@ export default function RootLayout({
       className={`${raleway.variable} ${lato.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white text-[#0a0a0a]">
-        <StructuredData />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

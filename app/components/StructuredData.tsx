@@ -2,6 +2,12 @@ export default function StructuredData() {
   const data = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "MedicalBusiness"],
+    // Must match the `@id` used by `medicalBusinessSchema` in `lib/site-schema.ts`
+    // so Google merges these into a single business entity on pages that emit
+    // both (otherwise the graph node and this node each carry their own
+    // aggregateRating, which trips the "Review has multiple aggregate ratings"
+    // rich-result error in Search Console).
+    "@id": "https://awceugene.com/#medicalbusiness",
     name: "Absolute Wellness Center",
     url: "https://awceugene.com",
     telephone: "+1-541-484-5777",

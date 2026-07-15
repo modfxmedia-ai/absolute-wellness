@@ -54,23 +54,6 @@ const pageSchema = buildPageGraph({
   ],
 });
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Absolute Wellness Center",
-  url: URL,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "2286 Oakmont Way",
-    addressLocality: "Eugene",
-    addressRegion: "OR",
-    postalCode: "97401",
-    addressCountry: "US",
-  },
-  telephone: "(541) 484-5777",
-  openingHours: "Mo-Th 09:00-18:00",
-};
-
 const FAQS = [
   {
     q: "How soon after a car accident should I see a chiropractor in Eugene, OR?",
@@ -206,10 +189,6 @@ export default function AutoAccidentChiropractorPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       <PageHero
