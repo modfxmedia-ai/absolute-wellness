@@ -52,7 +52,7 @@ const pageSchema = buildPageGraph({
 });
 
 const NP_IMAGE = "/images/newpatients_img.jpg";
-const FORM_HREF = "#"; // TODO: replace with hosted PDF when available
+const FORM_HREF = "/forms/new-patient-paperwork.pdf";
 
 const steps = [
   {
@@ -158,6 +158,9 @@ export default function NewPatientsPage() {
                   </Link>
                   <a
                     href={FORM_HREF}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
                     className="inline-flex items-center gap-2 rounded-full border-2 px-7 py-3.5 font-[family-name:var(--font-raleway)] text-sm font-bold transition-colors hover:bg-[#7E9146] hover:text-white"
                     style={{ borderColor: BRAND, color: BRAND }}
                   >
@@ -315,6 +318,9 @@ export default function NewPatientsPage() {
                 </p>
                 <a
                   href={FORM_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
                   className="mt-6 inline-flex items-center gap-2 rounded-full px-8 py-3 font-[family-name:var(--font-raleway)] text-sm font-bold text-white transition-transform hover:scale-[1.02]"
                   style={{ backgroundColor: BRAND }}
                 >
