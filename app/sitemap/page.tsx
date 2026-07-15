@@ -56,6 +56,7 @@ const PAGES: SitemapItem[] = [
   { label: "Auto Injury", href: "/auto-injury/" },
   { label: "Back Pain", href: "/back-pain/" },
   { label: "Bioidentical Hormones", href: "/bioidentical-hormones/" },
+  { label: "Blog", href: "/blog/" },
   { label: "Chiropractic Care", href: "/chiropractic-care/" },
   { label: "Conditions", href: "/conditions/" },
   { label: "Contact", href: "/contact/" },

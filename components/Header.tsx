@@ -33,9 +33,14 @@ const CONDITIONS: NavChild[] = [
   { label: "Whiplash", href: "/whiplash/" },
 ];
 
+const ABOUT: NavChild[] = [
+  { label: "About Us", href: "/about/" },
+  { label: "Blog", href: "/blog/" },
+];
+
 const NAV: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about/" },
+  { label: "About", href: "/about/", children: ABOUT },
   { label: "New Patients", href: "/new-patients/" },
   { label: "Appointments", href: "/appointments/" },
   { label: "Services", href: "/services/", children: SERVICES },
@@ -202,8 +207,16 @@ export default function Header() {
 
                   {hasChildren && (
                     <div className="invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-                      <div className="w-[440px] rounded-xl bg-white p-2 shadow-xl ring-1 ring-black/5">
-                        <div className="grid grid-cols-2 gap-1">
+                      <div
+                        className={`${
+                          item.children!.length > 4 ? "w-[440px]" : "w-[220px]"
+                        } rounded-xl bg-white p-2 shadow-xl ring-1 ring-black/5`}
+                      >
+                        <div
+                          className={`grid gap-1 ${
+                            item.children!.length > 4 ? "grid-cols-2" : "grid-cols-1"
+                          }`}
+                        >
                           {item.children!.map((c) => {
                             const a = pathname === c.href;
                             return (

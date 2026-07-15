@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { CITIES, SERVICES } from "@/lib/areas";
+import { getAllPosts } from "@/lib/blog";
 
 const ROUTES = [
   "/",
@@ -11,6 +12,7 @@ const ROUTES = [
   "/auto-injury/",
   "/back-pain/",
   "/bioidentical-hormones/",
+  "/blog/",
   "/chiropractic-care/",
   "/conditions/",
   "/contact/",
@@ -42,6 +44,7 @@ const PRIMARY_PAGES = new Set([
   "/appointments/",
   "/new-patients/",
   "/areas/",
+  "/blog/",
   "/chiropractic-care/",
   "/nutritional-ivs/",
   "/medical-weight-loss/",
@@ -74,5 +77,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...core, ...cityHubs, ...cityServices];
+  const blogPosts = getAllPosts().map((p) => ({
+    url: `${base}/blog/${p.slug}/`,
+    lastModified: p.updatedAt ? new Date(p.updatedAt) : new Date(p.publishedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...core, ...cityHubs, ...cityServices, ...blogPosts];
 }
