@@ -209,80 +209,66 @@ export default function BlogIndexPage() {
       )}
 
       {/* Grid of remaining posts */}
-      <section className="relative bg-white py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          {remaining.length > 0 ? (
-            <>
-              <Reveal>
-                <h2 className="font-[family-name:var(--font-raleway)] text-3xl font-black tracking-tight text-gray-900 sm:text-4xl">
-                  More Articles
-                </h2>
-              </Reveal>
-
-              <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {remaining.map((p, i) => (
-                  <li key={p.slug}>
-                    <Reveal delay={(i % 3) * 0.06}>
-                      <Link
-                        href={`/blog/${p.slug}/`}
-                        className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
-                      >
-                        <div className="relative aspect-[16/10] overflow-hidden">
-                          <Image
-                            src={p.cover}
-                            alt={p.coverAlt ?? p.title}
-                            fill
-                            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                            className="object-cover transition-transform duration-700 group-hover:scale-105"
-                          />
-                          <span
-                            className="absolute left-4 top-4 inline-flex items-center rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white"
-                            style={{ backgroundColor: BRAND }}
-                          >
-                            {p.category}
-                          </span>
-                        </div>
-
-                        <div className="flex flex-1 flex-col gap-4 p-6">
-                          <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">
-                            <time dateTime={p.publishedAt}>
-                              {formatDate(p.publishedAt)}
-                            </time>
-                            <span aria-hidden>·</span>
-                            <span>{p.readMinutes} min read</span>
-                          </div>
-                          <h3 className="font-[family-name:var(--font-raleway)] text-xl font-bold leading-tight text-gray-900 group-hover:text-[#5a6a30]">
-                            {p.title}
-                          </h3>
-                          <p className="text-sm leading-6 text-gray-600 line-clamp-3">
-                            {p.excerpt}
-                          </p>
-                          <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#7E9146] transition-transform group-hover:translate-x-1">
-                            Read more
-                            {Icons.arrow("h-4 w-4")}
-                          </span>
-                        </div>
-                      </Link>
-                    </Reveal>
-                  </li>
-                ))}
-              </ul>
-            </>
-          ) : (
+      {remaining.length > 0 && (
+        <section className="relative bg-white py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-6">
             <Reveal>
-              <div className="rounded-3xl border border-dashed border-gray-200 bg-[#f7f9f2] px-8 py-16 text-center">
-                <p className="font-[family-name:var(--font-raleway)] text-2xl font-black text-gray-900">
-                  More articles are on the way.
-                </p>
-                <p className="mx-auto mt-3 max-w-xl text-gray-600">
-                  We're actively writing new posts on chiropractic care, hormone
-                  balance, weight loss, and pain relief. Check back soon.
-                </p>
-              </div>
+              <h2 className="font-[family-name:var(--font-raleway)] text-3xl font-black tracking-tight text-gray-900 sm:text-4xl">
+                More Articles
+              </h2>
             </Reveal>
-          )}
-        </div>
-      </section>
+
+            <ul className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {remaining.map((p, i) => (
+                <li key={p.slug}>
+                  <Reveal delay={(i % 3) * 0.06}>
+                    <Link
+                      href={`/blog/${p.slug}/`}
+                      className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-md ring-1 ring-black/5 transition-all hover:-translate-y-1 hover:shadow-xl"
+                    >
+                      <div className="relative aspect-[16/10] overflow-hidden">
+                        <Image
+                          src={p.cover}
+                          alt={p.coverAlt ?? p.title}
+                          fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <span
+                          className="absolute left-4 top-4 inline-flex items-center rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-white"
+                          style={{ backgroundColor: BRAND }}
+                        >
+                          {p.category}
+                        </span>
+                      </div>
+
+                      <div className="flex flex-1 flex-col gap-4 p-6">
+                        <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-gray-500">
+                          <time dateTime={p.publishedAt}>
+                            {formatDate(p.publishedAt)}
+                          </time>
+                          <span aria-hidden>·</span>
+                          <span>{p.readMinutes} min read</span>
+                        </div>
+                        <h3 className="font-[family-name:var(--font-raleway)] text-xl font-bold leading-tight text-gray-900 group-hover:text-[#5a6a30]">
+                          {p.title}
+                        </h3>
+                        <p className="text-sm leading-6 text-gray-600 line-clamp-3">
+                          {p.excerpt}
+                        </p>
+                        <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-bold text-[#7E9146] transition-transform group-hover:translate-x-1">
+                          Read more
+                          {Icons.arrow("h-4 w-4")}
+                        </span>
+                      </div>
+                    </Link>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="relative overflow-hidden bg-[#0a0a0a] py-20 text-white">
