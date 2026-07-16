@@ -71,7 +71,7 @@ export const POSTS: BlogPost[] = [
     ],
     author: "Absolute Wellness Center",
     authorRole: "Care Team",
-    publishedAt: "2026-07-21",
+    publishedAt: "2026-07-15",
     readMinutes: 7,
     cover: "/images/blogs-images/semaglutide-weight-loss-myths-and-facts-in-eugene.jpg",
     coverAlt:
