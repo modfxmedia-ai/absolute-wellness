@@ -57,6 +57,285 @@ export type BlogPost = {
 
 export const POSTS: BlogPost[] = [
   {
+    slug: "stay-active-outdoors-with-glp-1-support-in-eugene",
+    title: "Stay Active Outdoors With GLP-1 Support in Eugene",
+    description:
+      "Explore how to enjoy Eugene trails, rivers, and parks while pursuing GLP-1 weight loss in Eugene with safe, doctor guided wellness strategies.",
+    category: "Weight Loss",
+    tags: [
+      "GLP-1",
+      "Medical Weight Loss",
+      "Eugene, OR",
+      "Outdoor Activity",
+      "Wellness",
+    ],
+    author: "Absolute Wellness Center",
+    authorRole: "Care Team",
+    publishedAt: "2026-08-04",
+    readMinutes: 7,
+    cover: "/images/blogs-images/stay-active-outdoors-with-glp-1-support-in-eugene.webp",
+    coverAlt:
+      "Active adults enjoying Eugene, OR trails and river paths while on a GLP-1 weight loss program.",
+    excerpt:
+      "Living near Eugene's trails, rivers, and parks can feel frustrating when extra weight keeps you on the sidelines. Here is how to stay active safely while pursuing GLP-1 weight loss in Eugene.",
+    featured: true,
+    relatedSlugs: [
+      "signs-you-may-benefit-from-semaglutide-weight-loss",
+      "semaglutide-weight-loss-myths-and-facts-in-eugene",
+    ],
+    content: [
+      {
+        type: "heading",
+        level: 2,
+        text: "Rediscover Oregon\u2019s Outdoors While Losing Weight",
+      },
+      {
+        type: "paragraph",
+        text: "Living near trails, rivers, and parks can feel frustrating when extra weight or low energy keeps you on the sidelines. If you are using GLP-1 weight loss in Eugene, or thinking about it, you might be wondering how to enjoy our amazing outdoor spaces while your body is changing.",
+      },
+      {
+        type: "paragraph",
+        text: "At Absolute Wellness Center, we see GLP-1 medications as one helpful tool, not the whole story. When weight comes off in a safe, guided way, everyday adventures like hiking Spencer Butte, riding along the Ruth Bascom Riverbank Path, strolling Hendricks Park, or floating the Willamette can start to feel more possible again. The goal is not just a lower number on the scale, but a more active life you actually enjoy.",
+      },
+      {
+        type: "paragraph",
+        text: "In this article, we will talk about how GLP-1 medications work, how to move safely, how to fuel your body when your appetite feels different, and how to protect your joints and muscles as you get more active. We will also share simple ways to use Eugene\u2019s natural spaces as motivation, without feeling pressured or limited.",
+      },
+
+      {
+        type: "heading",
+        level: 2,
+        text: "How GLP-1 Weight Loss in Eugene Actually Works",
+      },
+      {
+        type: "paragraph",
+        text: "GLP-1 medications are a type of prescription treatment that works with your body\u2019s own signals. They copy a natural hormone that helps control appetite and blood sugar. This can help you feel full with smaller portions and reduce strong cravings that can make weight loss hard.",
+      },
+      {
+        type: "paragraph",
+        text: "Here is what they commonly do in simple terms:",
+      },
+      {
+        type: "list",
+        items: [
+          "Help you feel satisfied sooner when you eat",
+          "Slow down how quickly food leaves your stomach",
+          "Support steadier blood sugar throughout the day",
+          "Make it easier to say no to mindless snacking",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "At Absolute Wellness Center, GLP-1 weight loss in Eugene is part of a medically supervised plan. We look at your overall health, medications, past injuries, energy levels, and goals. It is not a one-size-fits-all program, and it is not about perfection.",
+      },
+      {
+        type: "paragraph",
+        text: "A few common myths come up a lot:",
+      },
+      {
+        type: "list",
+        items: [
+          "You do not have to \u201Ceat perfectly\u201D to benefit",
+          "You can be active while using GLP-1 medications, with guidance",
+          "GLP-1s are not a magic cure, they are a tool that works best with movement, nutrition, and lifestyle support",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "In daily life, steadier blood sugar can make long walks or easy bike rides feel more doable, without the same energy crashes. Reduced cravings can make it simpler to grab a balanced snack before you head out the door instead of skipping food or grabbing something that leaves you sluggish.",
+      },
+
+      {
+        type: "heading",
+        level: 2,
+        text: "Moving More Safely on GLP-1 on Eugene Trails and in Parks",
+      },
+      {
+        type: "paragraph",
+        text: "If you are newer to activity or coming back after a long break, starting small is smart. GLP-1 medications can make movement feel easier as weight starts to drop, but it is important not to jump too fast into intense workouts.",
+      },
+      {
+        type: "paragraph",
+        text: "Good starting options around Eugene include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Flat walks on the Ruth Bascom Riverbank Path",
+          "Easy loops in neighborhood parks or Hendricks Park",
+          "Gentle bike rides on paved paths",
+          "Short, mostly flat trails before tackling steeper hikes like Mt. Pisgah",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Joint-friendly movement is especially important for knees, hips, and backs. As a regenerative and whole-body wellness clinic, we often pair outdoor activity with:",
+      },
+      {
+        type: "list",
+        items: [
+          "Chiropractic care to support alignment and ease tension",
+          "Corrective and rehabilitation exercises to improve stability",
+          "Joint injections when appropriate, to help reduce pain and support mobility",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Safety while on GLP-1 medications also means paying attention to:",
+      },
+      {
+        type: "list",
+        items: [
+          "Hunger and fullness cues, which may feel quieter or different",
+          "Hydration, especially in summer heat or on sunny fall days",
+          "Avoiding overexertion when your body starts to feel lighter and more energetic",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "You might enjoy:",
+      },
+      {
+        type: "list",
+        items: [
+          "Sunrise or evening walks by the river when it is cooler",
+          "Early fall hikes to enjoy changing leaves on moderate trails",
+          "Parking a little farther from the Saturday market and walking the river path before or after shopping",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The key is to make movement regular and enjoyable, not punishing.",
+      },
+
+      {
+        type: "heading",
+        level: 2,
+        text: "Fueling Active Days While Appetite Is Changing",
+      },
+      {
+        type: "paragraph",
+        text: "One side effect of GLP-1 medications is lower appetite. While that can help with weight loss, it can also make it easy to eat too little when you add more activity. That can leave you tired, sore, and slow to recover.",
+      },
+      {
+        type: "paragraph",
+        text: "To keep energy steady while you are more active, it often helps to:",
+      },
+      {
+        type: "list",
+        items: [
+          "Prioritize protein at each meal, such as eggs, Greek yogurt, lean meats, beans, or tofu",
+          "Add a small, balanced snack before and after longer walks, rides, or hikes",
+          "Choose carbohydrates around activity, like fruit, whole grains, or starchy vegetables",
+          "Drink plenty of water throughout the day, not just during exercise",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "From a whole-body wellness view, we also pay attention to nutrient status and hydration. At Absolute Wellness Center, we may suggest IV therapy, nutritional guidance, or lab testing when needed, to look for patterns that could be affecting energy and recovery.",
+      },
+      {
+        type: "paragraph",
+        text: "In a place like Eugene, it is often easy to build balanced meals around local, fresh foods. For example, you might:",
+      },
+      {
+        type: "list",
+        items: [
+          "Eat a protein-rich breakfast before hiking Spencer Butte, such as eggs with veggies or yogurt with fruit and nuts",
+          "Pack simple, portable snacks like nuts, cheese sticks, or jerky along with fruit for trail days",
+          "Refuel afterward with a balanced meal, even if you do not feel very hungry yet, so your body has what it needs to repair and rebuild",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Listening to your body on GLP-1 medications includes noticing when you need fuel, not just when you feel very hungry.",
+      },
+
+      {
+        type: "heading",
+        level: 2,
+        text: "Protecting Joints and Muscles as the Weight Comes Off",
+      },
+      {
+        type: "paragraph",
+        text: "As the number on the scale changes, the load on your joints and connective tissues changes too. Old injuries can act up, and new aches can show up when you begin to walk more, ride more, or try hikes again.",
+      },
+      {
+        type: "paragraph",
+        text: "Support for joints and muscles might include:",
+      },
+      {
+        type: "list",
+        items: [
+          "Chiropractic care to help improve alignment and reduce strain",
+          "Physical rehabilitation-style exercises to build strength and stability",
+          "Joint injections, when appropriate, to help manage pain and support movement",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Cardio is helpful, but strength work is just as important while you lose weight. Brief strength sessions 2 or 3 times per week can help you:",
+      },
+      {
+        type: "list",
+        items: [
+          "Hold on to muscle while losing fat",
+          "Protect knees and hips on hills and uneven ground",
+          "Make everyday tasks like gardening, walking downtown, or climbing stairs feel easier",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Gentle strength ideas that pair well with outdoor time include:",
+      },
+      {
+        type: "list",
+        items: [
+          "A few body-weight squats, wall pushups, and calf raises after a river walk",
+          "Resistance band exercises at home on rainy days",
+          "Simple mobility work for ankles, hips, and shoulders to feel more stable on varied terrain",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Over time, these small habits can make outdoor fun feel safer and more sustainable.",
+      },
+
+      {
+        type: "heading",
+        level: 2,
+        text: "Create Your Personalized Active Life Plan in Eugene",
+      },
+      {
+        type: "paragraph",
+        text: "GLP-1 therapy works best when it is part of a bigger plan for how you want to live, not just what you want to weigh. In a community with so many trails, parks, and river paths, your plan can be rooted in local activities you actually look forward to.",
+      },
+      {
+        type: "paragraph",
+        text: "At Absolute Wellness Center in Eugene, we combine medical weight loss tools like GLP-1 medications with attention to joint health, movement, pain, energy, and recovery. We look at your medical history, mobility, and goals, then build a realistic path that may include medication, activity guidance, chiropractic care, and IV support when needed.",
+      },
+      {
+        type: "paragraph",
+        text: "A simple first step is to pick one doable activity for the coming week, like a short walk on a river path or a gentle park trail. Notice how your body feels, what seems easy, and what feels limited. Those real-life experiences help shape a plan that fits you, your health, and the way you want to enjoy Eugene\u2019s great outdoors, season after season.",
+      },
+
+      {
+        type: "heading",
+        level: 2,
+        text: "Start Your Personalized GLP-1 Weight Loss Journey Today",
+      },
+      {
+        type: "callout",
+        title: "Ready when you are",
+        text: "If you are ready for medically guided support to reach a healthier weight, we are here to help. Our providers will walk you through your options for GLP-1 weight loss in Eugene and design a plan tailored to your health history, lifestyle, and goals. Take the next step with Absolute Wellness Center by scheduling a visit or sending a question through our contact page. Together, we can create a sustainable path toward lasting results.",
+        links: [
+          { label: "Learn about Medical Weight Loss", href: "/medical-weight-loss/" },
+          { label: "Contact Us", href: "/contact/" },
+        ],
+      },
+    ],
+  },
+  {
     slug: "signs-you-may-benefit-from-semaglutide-weight-loss",
     title: "Lifestyle Clues You're Ready for Semaglutide in Eugene",
     description:
@@ -78,7 +357,6 @@ export const POSTS: BlogPost[] = [
       "Person walking a trail in Eugene, OR — lifestyle signs you may benefit from semaglutide medical weight loss.",
     excerpt:
       "If you are doing many of the right things and still feel stuck, your body may be sending signals that it needs more than willpower. Here are the everyday clues that medical weight loss semaglutide in Eugene may be a good fit.",
-    featured: true,
     relatedSlugs: ["semaglutide-weight-loss-myths-and-facts-in-eugene"],
     content: [
       {
