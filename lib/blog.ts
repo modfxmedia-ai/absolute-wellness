@@ -1087,7 +1087,8 @@ export function getPost(slug: string): BlogPost | undefined {
 }
 
 export function getFeaturedPost(): BlogPost | undefined {
-  return getAllPosts().find((p) => p.featured) ?? getAllPosts()[0];
+  // Hero slot always shows the newest post, regardless of the `featured` flag.
+  return getAllPosts()[0];
 }
 
 export function getRelatedPosts(post: BlogPost, limit = 3): BlogPost[] {
